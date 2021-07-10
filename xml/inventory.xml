@@ -1,0 +1,78 @@
+<Inventorys>
+    <Inventory>
+        <Background texture="back_0.png"/>
+        <Slots leftMargin="41" topMargin="47" HSpacing="11" VSpacing="8" HCount="3" VCount="3">
+            <HighlightFrame texture="slot_big.png"/>
+        </Slots>
+        <MainPanel X="73" Y="70" texture="back.png"/>
+        <Buttons>
+            <Size Size="2"/>
+            <Button ID="mapa" x="522" y="452">
+                <StdState texture="button_no.png"/>
+                <HighlightState texture="button_hg.png"/>
+                <PressedState texture="button_dn.png"/>
+            </Button>
+            <Button ID="powrot" x="300" y="512">
+                <StdState texture="back_no.png"/>
+                <HighlightState texture="back_hg.png"/>
+                <PressedState texture="back_dn.png"/>
+            </Button>
+        </Buttons>
+        <Slider X="561" Y="143">
+            <Fence texture="slider_bkg.png"/>
+            <Button ID="up_bn" x="554" y="136">
+                <StdState texture="arrowup_no.png"/>
+                <HighlightState texture="arrowup_hg.png"/>
+                <PressedState texture="arrowup_dn.png"/>
+            </Button>
+            <Button ID="down_bn" x="554" y="406">
+                <StdState texture="arrowdown_no.png"/>
+                <HighlightState texture="arrowdown_hg.png"/>
+                <PressedState texture="arrowdown_dn.png"/>
+            </Button>
+            <Button ID="slide_bn" x="550" y="147">
+                <StdState texture="slider.png"/>
+                <HighlightState texture="slider.png"/>
+                <PressedState texture="slider.png"/>
+            </Button>
+        </Slider>
+    </Inventory>
+    <Inventory>
+        <Background texture="back_0.png" />
+        <Slots leftMargin="41" topMargin="47" HSpacing="11" VSpacing="8" HCount="3" VCount="3">
+            <HighlightFrame texture="slot_big.png" />
+        </Slots>
+        <MainPanel X="73" Y="70" texture="back.png" />
+        <Buttons>
+            <Size Size="2" />
+            <Button ID="mapa" x="522" y="452">
+                <StdState texture="button_no.png" />
+                <HighlightState texture="button_hg.png" />
+                <PressedState texture="button_dn.png" />
+            </Button>
+            <Button ID="powrot" x="300" y="512">
+                <StdState texture="back_no.png" />
+                <HighlightState texture="back_hg.png" />
+                <PressedState texture="back_dn.png" />
+            </Button>
+        </Buttons>
+        <Slider X="561" Y="143">
+            <Fence texture="slider_bkg.png" />
+            <Button ID="up_bn" x="554" y="136">
+                <StdState texture="arrowup_no.png" />
+                <HighlightState texture="arrowup_hg.png" />
+                <PressedState texture="arrowup_dn.png" />
+            </Button>
+            <Button ID="down_bn" x="554" y="406">
+                <StdState texture="arrowdown_no.png" />
+                <HighlightState texture="arrowdown_hg.png" />
+                <PressedState texture="arrowdown_dn.png" />
+            </Button>
+            <Button ID="slide_bn" x="550" y="147">
+                <StdState texture="slider.png" />
+                <HighlightState texture="slider.png" />
+                <PressedState texture="slider.png" />
+            </Button>
+        </Slider>
+    </Inventory>
+</Inventorys>

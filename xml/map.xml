@@ -1,0 +1,233 @@
+<MapData>
+    <Map>
+        <Background texture="back_0.png" />
+        <MainPanel X="0" Y="0" texture="back_0.png" />
+        <Buttons>
+            <Size Size="12" />
+            <Button ID="SZKOLA" x="530" y="280">
+                <StdState texture="szkola_no.png" />
+                <HighlightState texture="szkola_hg.png" />
+                <PressedState texture="szkola_hg.png" />
+            </Button>
+            <Button ID="sklep plytowy" x="150" y="100">
+                <StdState texture="sklep_plytowy_no.png" />
+                <HighlightState texture="sklep_plytowy_hg.png" />
+                <PressedState texture="sklep_plytowy_hg.png" />
+            </Button>
+            <Button ID="skejtpark 1" x="170" y="390">
+                <StdState texture="skejtpark1_no.png" />
+                <HighlightState texture="skejtpark1_hg.png" />
+                <PressedState texture="skejtpark1_hg.png" />
+            </Button>
+            <Button ID="skejtpark 2" x="240" y="350">
+                <StdState texture="skejtpark2_no.png" />
+                <HighlightState texture="skejtpark2_hg.png" />
+                <PressedState texture="skejtpark2_hg.png" />
+            </Button>
+            <Button ID="plac za miastem" x="650" y="100">
+                <StdState texture="polana_za_miastem_no.png" />
+                <HighlightState texture="polana_za_miastem_hg.png" />
+                <PressedState texture="polana_za_miastem_hg.png" />
+            </Button>
+            <Button ID="PARKING STRZEZONY" x="80" y="430">
+                <StdState texture="parking_strzezony_no.png" />
+                <HighlightState texture="parking_strzezony_hg.png" />
+                <PressedState texture="parking_strzezony_hg.png" />
+            </Button>
+            <Button ID="okolice kosciola" x="250" y="250">
+                <StdState texture="okolice_kosciola_no.png" />
+                <HighlightState texture="okolice_kosciola_hg.png" />
+                <PressedState texture="okolice_kosciola_hg.png" />
+            </Button>
+            <Button ID="kafejka internetowa" x="380" y="300">
+                <StdState texture="kafejka_internetowa_no.png" />
+                <HighlightState texture="kafejka_internetowa_hg.png" />
+                <PressedState texture="kafejka_internetowa_hg.png" />
+            </Button>
+            <Button ID="centrum handlowe" x="420" y="140">
+                <StdState texture="centrum_handlowe_no.png" />
+                <HighlightState texture="centrum_handlowe_hg.png" />
+                <PressedState texture="centrum_handlowe_hg.png" />
+            </Button>
+            <Button ID="RAKOWIECKA" x="60" y="60">
+                <StdState texture="RAKOWIECKA_no.png" />
+                <HighlightState texture="RAKOWIECKA_hg.png" />
+                <PressedState texture="RAKOWIECKA_hg.png" />
+            </Button>
+            <Button ID="boisko szkolne" x="500" y="370">
+                <StdState texture="boisko_szkolne_no.png" />
+                <HighlightState texture="boisko_szkolne_hg.png" />
+                <PressedState texture="boisko_szkolne_hg.png" />
+            </Button>
+            <Button ID="powrot" x="347" y="536">
+                <StdState texture="back_no.png" />
+                <HighlightState texture="back_hg.png" />
+                <PressedState texture="back_dn.png" />
+            </Button>
+        </Buttons>
+    </Map>
+    <Map>
+        <Background texture="back_0.png" />
+        <MainPanel X="0" Y="0" texture="back_0.png" />
+        <Buttons>
+            <Size Size="15" />
+            <Button ID="PRZEJSCIE MIEDZY TOALETA A CMENTARZEM" x="561" y="131">
+                <StdState texture="tajne przejscie_no.png" />
+                <HighlightState texture="tajne przejscie_hg.png" />
+                <PressedState texture="tajne przejscie_hg.png" />
+            </Button>
+            <Button ID="STODOLA" x="311" y="140">
+                <StdState texture="stodola_no.png" />
+                <HighlightState texture="stodola_hg.png" />
+                <PressedState texture="stodola_hg.png" />
+            </Button>
+            <Button ID="STODOLA PO CIEMKU" x="311" y="140">
+                <StdState texture="stodola_2_no.png" />
+                <HighlightState texture="stodola_2_hg.png" />
+                <PressedState texture="stodola_2_hg.png" />
+            </Button>
+            <Button ID="STARSZA CZESC CMENTARZA" x="655" y="322">
+                <StdState texture="stary cmentarz_no.png" />
+                <HighlightState texture="stary cmentarz_hg.png" />
+                <PressedState texture="stary cmentarz_hg.png" />
+            </Button>
+            <Button ID="STACJA BENZYNOWA" x="509" y="74">
+                <StdState texture="stacja benzynowa_no.png" />
+                <HighlightState texture="stacja benzynowa_hg.png" />
+                <PressedState texture="stacja benzynowa_hg.png" />
+            </Button>
+            <Button ID="SKRZYZOWANIE" x="335" y="250">
+                <StdState texture="skrzyzowanie_no.png" />
+                <HighlightState texture="skrzyzowanie_hg.png" />
+                <PressedState texture="skrzyzowanie_hg.png" />
+            </Button>
+            <Button ID="LAKA" x="400" y="450">
+                <StdState texture="polana za miasteczkiem_no.png" />
+                <HighlightState texture="polana za miasteczkiem_hg.png" />
+                <PressedState texture="polana za miasteczkiem_hg.png" />
+            </Button>
+            <Button ID="OGROD ZA DOMEM LEKARZA" x="290" y="63">
+                <StdState texture="ogrod za domem lekarza_no.png" />
+                <HighlightState texture="ogrod za domem lekarza_hg.png" />
+                <PressedState texture="ogrod za domem lekarza_hg.png" />
+            </Button>
+            <Button ID="OBOZ HIPPISOW" x="164" y="446">
+                <StdState texture="oboz hipisow_no.png" />
+                <HighlightState texture="oboz hipisow_hg.png" />
+                <PressedState texture="oboz hipisow_hg.png" />
+            </Button>
+            <Button ID="LESNA DROGA Z WOJSKOWYM JEEPEM" x="256" y="398">
+                <StdState texture="droga z jeepem_no.png" />
+                <HighlightState texture="droga z jeepem_hg.png" />
+                <PressedState texture="droga z jeepem_hg.png" />
+            </Button>
+            <Button ID="DOM Z POKOJEM NA PIETRZE" x="202" y="63">
+                <StdState texture="dom zpokojem na pietrze_no.png" />
+                <HighlightState texture="dom zpokojem na pietrze_hg.png" />
+                <PressedState texture="dom zpokojem na pietrze_hg.png" />
+            </Button>
+            <Button ID="DOM LEKARZA" x="383" y="63">
+                <StdState texture="dom lekarza_no.png" />
+                <HighlightState texture="dom lekarza_hg.png" />
+                <PressedState texture="dom lekarza_hg.png" />
+            </Button>
+            <Button ID="DOM KOWALA" x="190" y="156">
+                <StdState texture="dom kowala_no.png" />
+                <HighlightState texture="dom kowala_hg.png" />
+                <PressedState texture="dom kowala_hg.png" />
+            </Button>
+            <Button ID="CMENTARZ" x="544" y="270">
+                <StdState texture="cmentarz_no.png" />
+                <HighlightState texture="cmentarz_hg.png" />
+                <PressedState texture="cmentarz_hg.png" />
+            </Button>
+            <Button ID="powrot" x="347" y="536">
+                <StdState texture="back_no.png" />
+                <HighlightState texture="back_hg.png" />
+                <PressedState texture="back_dn.png" />
+            </Button>
+        </Buttons>
+    </Map>
+    <Map>
+        <Background texture="back_0.png" />
+        <MainPanel X="0" Y="0" texture="back_0.png" />
+        <Buttons>
+            <Size Size="15" />
+            <Button ID="ZLOMOWISKO" x="580" y="200">
+                <StdState texture="ZLOMOWISKO_no.png" />
+                <HighlightState texture="ZLOMOWISKO_hg.png" />
+                <PressedState texture="ZLOMOWISKO_hg.png" />
+            </Button>
+            <Button ID="ZAJAZD" x="420" y="320">
+                <StdState texture="ZAJAZD_no.png" />
+                <HighlightState texture="ZAJAZD_hg.png" />
+                <PressedState texture="ZAJAZD_hg.png" />
+            </Button>
+            <Button ID="ROZGLOSNIA RADIOWA" x="320" y="290">
+                <StdState texture="ROZGLOSNIA RADIOWA_no.png" />
+                <HighlightState texture="ROZGLOSNIA RADIOWA_hg.png" />
+                <PressedState texture="ROZGLOSNIA RADIOWA_hg.png" />
+            </Button>
+            <Button ID="POKOJ NA PIETRZE ZAJAZDU" x="500" y="330">
+                <StdState texture="POKOJ NA PIETRZE ZAJAZDU_no.png" />
+                <HighlightState texture="POKOJ NA PIETRZE ZAJAZDU_hg.png" />
+                <PressedState texture="POKOJ NA PIETRZE ZAJAZDU_hg.png" />
+            </Button>
+            <Button ID="PODWORZE ZA TYMZE DOMEM" x="350" y="435">
+                <StdState texture="PODWORZE ZA TYMZE DOMEM_no.png" />
+                <HighlightState texture="PODWORZE ZA TYMZE DOMEM_hg.png" />
+                <PressedState texture="PODWORZE ZA TYMZE DOMEM_hg.png" />
+            </Button>
+            <Button ID="PODJAZD POD KLASZTOREM" x="290" y="63">
+                <StdState texture="PODJAZD POD KLASZTOREM_no.png" />
+                <HighlightState texture="PODJAZD POD KLASZTOREM_hg.png" />
+                <PressedState texture="PODJAZD POD KLASZTOREM_hg.png" />
+            </Button>
+            <Button ID="PLAC PRZED ZAJAZDEM" x="400" y="230">
+                <StdState texture="PLAC PRZED ZAJAZDEM_no.png" />
+                <HighlightState texture="PLAC PRZED ZAJAZDEM_hg.png" />
+                <PressedState texture="PLAC PRZED ZAJAZDEM_hg.png" />
+            </Button>
+            <Button ID="PARKING PRZY ROZGLOSNI RADIOWEJ" x="250" y="270">
+                <StdState texture="PARKING PRZY ROZGLOSNI RADIOWEJ_no.png" />
+                <HighlightState texture="PARKING PRZY ROZGLOSNI RADIOWEJ_hg.png" />
+                <PressedState texture="PARKING PRZY ROZGLOSNI RADIOWEJ_hg.png" />
+            </Button>
+            <Button ID="MUSZLA KONCERTOWA" x="500" y="446">
+                <StdState texture="MUSZLA KONCERTOWA_no.png" />
+                <HighlightState texture="MUSZLA KONCERTOWA_hg.png" />
+                <PressedState texture="MUSZLA KONCERTOWA_hg.png" />
+            </Button>
+            <Button ID="KORYTARZ KLASZTORNY" x="380" y="63">
+                <StdState texture="KORYTARZ KLASZTORNY_no.png" />
+                <HighlightState texture="KORYTARZ KLASZTORNY_hg.png" />
+                <PressedState texture="KORYTARZ KLASZTORNY_hg.png" />
+            </Button>
+            <Button ID="KAPLICZKA ZA MIASTEM" x="630" y="63">
+                <StdState texture="KAPLICZKA ZA MIASTEM_no.png" />
+                <HighlightState texture="KAPLICZKA ZA MIASTEM_hg.png" />
+                <PressedState texture="KAPLICZKA ZA MIASTEM_hg.png" />
+            </Button>
+            <Button ID="DOM Z BIALYCH DESEK" x="230" y="434">
+                <StdState texture="DOM Z BIALYCH DESEK_no.png" />
+                <HighlightState texture="DOM Z BIALYCH DESEK_hg.png" />
+                <PressedState texture="DOM Z BIALYCH DESEK_hg.png" />
+            </Button>
+            <Button ID="BLOKADA NA DRODZE" x="485" y="190">
+                <StdState texture="BLOKADA NA DRODZE_no.png" />
+                <HighlightState texture="BLOKADA NA DRODZE_hg.png" />
+                <PressedState texture="BLOKADA NA DRODZE_hg.png" />
+            </Button>
+            <Button ID="BIBLIOTEKA" x="75" y="122">
+                <StdState texture="BIBLIOTEKA_no.png" />
+                <HighlightState texture="BIBLIOTEKA_hg.png" />
+                <PressedState texture="BIBLIOTEKA_hg.png" />
+            </Button>
+            <Button ID="powrot" x="347" y="536">
+                <StdState texture="back_no.png" />
+                <HighlightState texture="back_hg.png" />
+                <PressedState texture="back_dn.png" />
+            </Button>
+        </Buttons>
+    </Map>
+</MapData>

@@ -1,0 +1,282 @@
+<LocationsPositions>
+<Locationpos
+source="PARKING STRZEZONY" dest="SKEJTPARK 1" fred_x="124" fred_y="494" grucha_x="51" grucha_y="487" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="SKEJTPARK 1" dest="PARKING STRZEZONY" fred_x="939" fred_y="567" grucha_x="829" grucha_y="533" fred_direction="G" grucha_direction="G"  />
+<Locationpos
+source="SKEJTPARK 2" dest="PARKING STRZEZONY" fred_x="939" fred_y="567" grucha_x="829" grucha_y="533" fred_direction="G" grucha_direction="G"  />
+<Locationpos
+source="PARKING STRZEZONY" dest="NULL" fred_x="303" fred_y="507" grucha_x="410" grucha_y="534" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="SKEJTPARK 1" dest="NULL" fred_x="508" fred_y="546" grucha_x="339" grucha_y="531" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="SKEJTPARK 2" dest="NULL" fred_x="292" fred_y="580" grucha_x="445" grucha_y="590" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="OKOLICE KOSCIOLA" dest="NULL" fred_x="238" fred_y="529" grucha_x="317" grucha_y="574" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="SZKOLA" dest="NULL" fred_x="1093" fred_y="560" grucha_x="945" grucha_y="558" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="BOISKO SZKOLNE" dest="NULL" fred_x="582" fred_y="525" grucha_x="405" grucha_y="531" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="SKLEP PLYTOWY" dest="NULL" fred_x="150" fred_y="361" grucha_x="84" grucha_y="411" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="CENTRUM HANDLOWE" dest="NULL" fred_x="1086" fred_y="536" grucha_x="1207" grucha_y="522" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="KAFEJKA INTERNETOWA" dest="NULL" fred_x="1066" fred_y="565" grucha_x="896" grucha_y="540" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="SZKOLA" dest="KAFEJKA INTERNETOWA" fred_x="1093" fred_y="575" grucha_x="1006" grucha_y="553" fred_direction="G" grucha_direction="G"  />
+<Locationpos
+source="SKLEP PLYTOWY" dest="CENTRUM HANDLOWE" fred_x="104" fred_y="510" grucha_x="160" grucha_y="573" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="PLAC ZA MIASTEM" dest="NULL" fred_x="390" fred_y="552" grucha_x="522" grucha_y="457" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="KAFEJKA INTERNETOWA" dest="SIEDZIBA MAFII" fred_x="70" fred_y="584" grucha_x="110" grucha_y="501" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="SKEJTPARK 1" dest="SKEJTPARK 2" fred_x="637" fred_y="565" grucha_x="749" grucha_y="559" fred_direction="G" grucha_direction="G"  />
+<Locationpos
+source="SKEJTPARK 2" dest="SKEJTPARK 1" fred_x="474" fred_y="507" grucha_x="556" grucha_y="531" fred_direction="H" grucha_direction="H"  />
+<Locationpos
+source="SZKOLA" dest="BOISKO SZKOLNE" fred_x="858" fred_y="568" grucha_x="766" grucha_y="515" fred_direction="G" grucha_direction="G"  />
+<Locationpos
+source="BOISKO SZKOLNE" dest="SZKOLA" fred_x="477" fred_y="434" grucha_x="334" grucha_y="436" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="DOM KOWALA" dest="NULL" fred_x="370" fred_y="570" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="SKRZYZOWANIE" dest="NULL" fred_x="360" fred_y="580" grucha_x="0" grucha_y="0" fred_direction="E" grucha_direction="E"  />
+<Locationpos
+source="STODOLA" dest="NULL" fred_x="380" fred_y="425" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="KOMIKS1" dest="NULL" fred_x="-10" fred_y="-10" grucha_x="0" grucha_y="0" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="KOMIKS1" dest="OBOZ HIPPISOW" fred_x="450" fred_y="570" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="OBOZ HIPPISOW" dest="NULL" fred_x="450" fred_y="570" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="DOM LEKARZA" dest="NULL" fred_x="100" fred_y="580" grucha_x="0" grucha_y="0" fred_direction="D" grucha_direction="E"  />
+<Locationpos
+source="OGROD ZA DOMEM LEKARZA" dest="NULL" fred_x="250" fred_y="580" grucha_x="0" grucha_y="0" fred_direction="D" grucha_direction="E"  />
+<Locationpos
+source="STACJA BENZYNOWA" dest="NULL" fred_x="390" fred_y="540" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="STODOLA PO CIEMKU" dest="NULL" fred_x="409" fred_y="423" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="TOALETA" dest="NULL" fred_x="320" fred_y="560" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="PRZEJSCIE MIEDZY TOALETA A CMENTARZEM" dest="NULL" fred_x="445" fred_y="565" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="CMENTARZ" dest="NULL" fred_x="70" fred_y="570" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="STARSZA CZESC CMENTARZA" dest="NULL" fred_x="80" fred_y="510" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="LAKA" dest="NULL" fred_x="100" fred_y="580" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="DOM Z POKOJEM NA PIETRZE" dest="NULL" fred_x="220" fred_y="580" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="LESNA DROGA Z WOJSKOWYM JEEPEM" dest="NULL" fred_x="265" fred_y="527" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="LESNA DROGA Z WOJSKOWYM JEEPEM" dest="SKRZYZOWANIE" fred_x="330" fred_y="590" grucha_x="0" grucha_y="0" fred_direction="E" grucha_direction="E"  />
+<Locationpos
+source="SKRZYZOWANIE" dest="LESNA DROGA Z WOJSKOWYM JEEPEM" fred_x="54" fred_y="560" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="STODOLA" dest="SKRZYZOWANIE" fred_x="66" fred_y="307" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="SKRZYZOWANIE" dest="STODOLA" fred_x="382" fred_y="440" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="STODOLA PO CIEMKU" dest="SKRZYZOWANIE" fred_x="66" fred_y="307" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="SKRZYZOWANIE" dest="STODOLA PO CIEMKU" fred_x="382" fred_y="440" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="DOM LEKARZA" dest="SKRZYZOWANIE" fred_x="572" fred_y="161" grucha_x="0" grucha_y="0" fred_direction="B" grucha_direction="E"  />
+<Locationpos
+source="SKRZYZOWANIE" dest="DOM LEKARZA" fred_x="116" fred_y="575" grucha_x="0" grucha_y="0" fred_direction="D" grucha_direction="E"  />
+<Locationpos
+source="DOM KOWALA" dest="SKRZYZOWANIE" fred_x="40" fred_y="400" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="SKRZYZOWANIE" dest="DOM KOWALA" fred_x="738" fred_y="581" grucha_x="0" grucha_y="0" fred_direction="G" grucha_direction="E"  />
+<Locationpos
+source="STACJA BENZYNOWA" dest="SKRZYZOWANIE" fred_x="679" fred_y="234" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="SKRZYZOWANIE" dest="STACJA BENZYNOWA" fred_x="214" fred_y="545" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="CMENTARZ" dest="SKRZYZOWANIE" fred_x="684" fred_y="485" grucha_x="0" grucha_y="0" fred_direction="G" grucha_direction="E"  />
+<Locationpos
+source="SKRZYZOWANIE" dest="CMENTARZ" fred_x="59" fred_y="573" grucha_x="0" grucha_y="0" fred_direction="E" grucha_direction="E"  />
+<Locationpos
+source="LAKA" dest="SKRZYZOWANIE" fred_x="465" fred_y="574" grucha_x="0" grucha_y="0" fred_direction="E" grucha_direction="E"  />
+<Locationpos
+source="OBOZ HIPPISOW" dest="LESNA DROGA Z WOJSKOWYM JEEPEM" fred_x="257" fred_y="573" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="LESNA DROGA Z WOJSKOWYM JEEPEM" dest="OBOZ HIPPISOW" fred_x="1470" fred_y="590" grucha_x="0" grucha_y="0" fred_direction="F" grucha_direction="E"  />
+<Locationpos
+source="DOM KOWALA" dest="OBOZ HIPPISOW" fred_x="1570" fred_y="590" grucha_x="0" grucha_y="0" fred_direction="D" grucha_direction="E"  />
+<Locationpos
+source="DOM Z POKOJEM NA PIETRZE" dest="DOM KOWALA" fred_x="61" fred_y="553" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="DOM KOWALA" dest="DOM Z POKOJEM NA PIETRZE" fred_x="184" fred_y="580" grucha_x="0" grucha_y="0" fred_direction="D" grucha_direction="E"  />
+<Locationpos
+source="OGROD ZA DOMEM LEKARZA" dest="DOM LEKARZA" fred_x="628" fred_y="478" grucha_x="0" grucha_y="0" fred_direction="G" grucha_direction="E"  />
+<Locationpos
+source="DOM LEKARZA" dest="OGROD ZA DOMEM LEKARZA" fred_x="253" fred_y="577" grucha_x="0" grucha_y="0" fred_direction="D" grucha_direction="E"  />
+<Locationpos
+source="TOALETA ZWYKLA" dest="STACJA BENZYNOWA" fred_x="446" fred_y="408" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="STACJA BENZYNOWA" dest="TOALETA" fred_x="266" fred_y="535" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="STACJA BENZYNOWA" dest="TOALETA ZWYKLA" fred_x="266" fred_y="535" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="TOALETA" dest="PRZEJSCIE MIEDZY TOALETA A CMENTARZEM" fred_x="40" fred_y="458" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="PRZEJSCIE MIEDZY TOALETA A CMENTARZEM" dest="CMENTARZ" fred_x="59" fred_y="573" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="CMENTARZ" dest="STARSZA CZESC CMENTARZA" fred_x="70" fred_y="480" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="STARSZA CZESC CMENTARZA" dest="CMENTARZ" fred_x="534" fred_y="360" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="STARSZA CZESC CMENTARZA" dest="LAKA" fred_x="56" fred_y="571" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="POLANA Z GROBEM" dest="NULL" fred_x="348" fred_y="425" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="POLANA Z GROBEM" dest="NIEBO" fred_x="3200" fred_y="3200" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="NIEBO" dest="PIEKLO" fred_x="3701" fred_y="3476" grucha_x="0" grucha_y="0" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="WNETRZE SAMOCHODU" dest="PARKING STRZEZONY" fred_x="4000" fred_y="4000" grucha_x="4000" grucha_y="4000" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="WNETRZE SAMOCHODU1" dest="PARKING STRZEZONY" fred_x="774" fred_y="391" grucha_x="700" grucha_y="410" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="PARKING STRZEZONY" dest="WNETRZE SAMOCHODU1" fred_x="4000" fred_y="4000" grucha_x="4000" grucha_y="4000" fred_direction="" grucha_direction="E"  />
+<Locationpos
+source="PIEKLO" dest="NULL" fred_x="3701" fred_y="3476" grucha_x="" grucha_y="" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="PIEKLO" dest="POLANA Z GROBEM" fred_x="350" fred_y="375" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="POLANA Z GROBEM" dest="DROGA NA SKRAJU LASU" fred_x="1444" fred_y="546" grucha_x="0" grucha_y="0" fred_direction="F" grucha_direction="E"  />
+<Locationpos
+source="DROGA NA SKRAJU LASU" dest="POLANA Z GROBEM" fred_x="110" fred_y="355" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="DROGA Z AUTEM" dest="POLANA Z GROBEM" fred_x="720" fred_y="330" grucha_x="0" grucha_y="0" fred_direction="H" grucha_direction="E"  />
+<Locationpos
+source="POLANA Z GROBEM" dest="DROGA Z AUTEM" fred_x="80" fred_y="533" grucha_x="0" grucha_y="0" fred_direction="D" grucha_direction="E"  />
+<Locationpos
+source="DROGA Z AUTEM" dest="WNETRZE SAMOCHODU" fred_x="4000" fred_y="4000" grucha_x="4000" grucha_y="4000" fred_direction="" grucha_direction="E"  />
+<Locationpos
+source="WNETRZE SAMOCHODU" dest="Null" fred_x="760" fred_y="380" grucha_x="790" grucha_y="380" fred_direction="" grucha_direction="E"  />
+<Locationpos
+source="DROGA Z AUTEM" dest="Null" fred_x="80" fred_y="533" grucha_x="" grucha_y="" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="WNETRZE SAMOCHODU" dest="DROGA Z AUTEM" fred_x="345" fred_y="381" grucha_x="0" grucha_y="0" fred_direction="A" grucha_direction="E"  />
+<Locationpos
+source="WNETRZE SAMOCHODU" dest="BRAMA PRZY RAKOWIECKIEJ" fred_x="1095" fred_y="448" grucha_x="885" grucha_y="400" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="RAKOWIECKA" dest="Null" fred_x="735" fred_y="505" grucha_x="827" grucha_y="507" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="PARKING STRZEZONY" dest="RAKOWIECKA" fred_x="884" fred_y="498" grucha_x="962" grucha_y="551" fred_direction="G" grucha_direction="G"  />
+<Locationpos
+source="RAKOWIECKA" dest="PARKING STRZEZONY" fred_x="93" fred_y="576" grucha_x="52" grucha_y="529" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="BIBLIOTEKA" dest="Null" fred_x="513" fred_y="560" grucha_x="602" grucha_y="553" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="BLOKADA NA DRODZE" dest="Null" fred_x="983" fred_y="475" grucha_x="1082" grucha_y="475" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="DOM Z BIALYCH DESEK" dest="Null" fred_x="446" fred_y="594" grucha_x="540" grucha_y="586" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="KAPLICZKA ZA MIASTEM" dest="Null" fred_x="507" fred_y="560" grucha_x="615" grucha_y="553" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="KORYTARZ KLASZTORNY" dest="Null" fred_x="321" fred_y="462" grucha_x="395" grucha_y="450" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="KRYPTA" dest="Null" fred_x="356" fred_y="588" grucha_x="382" grucha_y="568" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="MUSZLA KONCERTOWA" dest="Null" fred_x="544" fred_y="455" grucha_x="630" grucha_y="444" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="PARKING PRZY ROZGLOSNI RADIOWEJ" dest="Null" fred_x="388" fred_y="574" grucha_x="487" grucha_y="573" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="PLAC PRZED ZAJAZDEM" dest="Null" fred_x="300" fred_y="563" grucha_x="388" grucha_y="555" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="PODJAZD POD KLASZTOREM" dest="Null" fred_x="443" fred_y="519" grucha_x="355" grucha_y="524" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="PODWORZE ZA TYMZE DOMEM" dest="Null" fred_x="456" fred_y="496" grucha_x="374" grucha_y="509" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="POKOJ NA PIETRZE ZAJAZDU" dest="Null" fred_x="272" fred_y="512" grucha_x="395" grucha_y="486" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="ROZGLOSNIA RADIOWA" dest="Null" fred_x="681" fred_y="473" grucha_x="599" grucha_y="432" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="ZAJAZD" dest="Null" fred_x="105" fred_y="586" grucha_x="200" grucha_y="589" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="ZLOMOWISKO" dest="Null" fred_x="560" fred_y="579" grucha_x="643" grucha_y="573" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="MUSZLA KONCERTOWA" dest="PLAC PRZED ZAJAZDEM" fred_x="83" fred_y="460" grucha_x="33" grucha_y="458" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="ZAJAZD" dest="PLAC PRZED ZAJAZDEM" fred_x="750" fred_y="462" grucha_x="834" grucha_y="472" fred_direction="H" grucha_direction="H"  />
+<Locationpos
+source="BLOKADA NA DRODZE" dest="ZLOMOWISKO" fred_x="624" fred_y="577" grucha_x="746" grucha_y="574" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="PARKING PRZY ROZGLOSNI RADIOWEJ" dest="PLAC PRZED ZAJAZDEM" fred_x="24" fred_y="535" grucha_x="60" grucha_y="467" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="BIBLIOTEKA" dest="PARKING PRZY ROZGLOSNI RADIOWEJ" fred_x="102" fred_y="573" grucha_x="244" grucha_y="555" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="DOM Z BIALYCH DESEK" dest="PLAC PRZED ZAJAZDEM" fred_x="301" fred_y="451" grucha_x="325" grucha_y="475" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="ROZGLOSNIA RADIOWA" dest="PARKING PRZY ROZGLOSNI RADIOWEJ" fred_x="220" fred_y="490" grucha_x="124" grucha_y="494" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="PLAC PRZED ZAJAZDEM" dest="PARKING PRZY ROZGLOSNI RADIOWEJ" fred_x="853" fred_y="578" grucha_x="918" grucha_y="491" fred_direction="G" grucha_direction="G"  />
+<Locationpos
+source="PARKING PRZY ROZGLOSNI RADIOWEJ" dest="ROZGLOSNIA RADIOWA" fred_x="681" fred_y="473" grucha_x="599" grucha_y="432" fred_direction="G" grucha_direction="G"  />
+<Locationpos
+source="PLAC PRZED ZAJAZDEM" dest="ZAJAZD" fred_x="105" fred_y="586" grucha_x="200" grucha_y="589" fred_direction="F" grucha_direction="E"  />
+<Locationpos
+source="PLAC PRZED ZAJAZDEM" dest="ZLOMOWISKO" fred_x="222" fred_y="596" grucha_x="320" grucha_y="597" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="KAPLICZKA ZA MIASTEM" dest="ZLOMOWISKO" fred_x="297" fred_y="410" grucha_x="297" grucha_y="380" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="DOM Z BIALYCH DESEK" dest="PODWORZE ZA TYMZE DOMEM" fred_x="302" fred_y="582" grucha_x="187" grucha_y="583" fred_direction="D" grucha_direction="D"  />
+<Locationpos
+source="MUSZLA KONCERTOWA" dest="PODWORZE ZA TYMZE DOMEM" fred_x="767" fred_y="401" grucha_x="841" grucha_y="392" fred_direction="H" grucha_direction="G"  />
+<Locationpos
+source="BIBLIOTEKA" dest="PODJAZD POD KLASZTOREM" fred_x="440" fred_y="540" grucha_x="344" grucha_y="540" fred_direction="E" grucha_direction="E"  />
+<Locationpos
+source="KRYPTA" dest="PODJAZD POD KLASZTOREM" fred_x="355" fred_y="524" grucha_x="443" grucha_y="519" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="PODWORZE ZA TYMZE DOMEM" dest="MUSZLA KONCERTOWA" fred_x="110" fred_y="457" grucha_x="58" grucha_y="431" fred_direction="C" grucha_direction="B"  />
+<Locationpos
+source="KORYTARZ KLASZTORNY" dest="KRYPTA" fred_x="356" fred_y="588" grucha_x="382" grucha_y="568" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="PODJAZD POD KLASZTOREM" dest="KORYTARZ KLASZTORNY" fred_x="326" fred_y="410" grucha_x="379" grucha_y="405" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="ZLOMOWISKO" dest="KAPLICZKA ZA MIASTEM" fred_x="588" fred_y="588" grucha_x="682" grucha_y="545" fred_direction="E" grucha_direction="E"  />
+<Locationpos
+source="PLAC PRZED ZAJAZDEM" dest="DOM Z BIALYCH DESEK" fred_x="195" fred_y="590" grucha_x="98" grucha_y="593" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="PODWORZE ZA TYMZE DOMEM" dest="DOM Z BIALYCH DESEK" fred_x="646" fred_y="530" grucha_x="781" grucha_y="517" fred_direction="A" grucha_direction="H"  />
+<Locationpos
+source="ZLOMOWISKO" dest="PLAC PRZED ZAJAZDEM" fred_x="840" fred_y="576" grucha_x="900" grucha_y="528" fred_direction="G" grucha_direction="G"  />
+<Locationpos
+source="PODJAZD POD KLASZTOREM" dest="BIBLIOTEKA" fred_x="560" fred_y="344" grucha_x="622" grucha_y="350" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="PARKING PRZY ROZGLOSNI RADIOWEJ" dest="BIBLIOTEKA" fred_x="178" fred_y="582" grucha_x="66" grucha_y="564" fred_direction="C" grucha_direction="C"  />
+<Locationpos
+source="ZAJAZD" dest="POKOJ NA PIETRZE ZAJAZDU" fred_x="272" fred_y="512" grucha_x="395" grucha_y="486" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="ROZGLOSNIA RADIOWA" dest="POKOJ NA PIETRZE ZAJAZDU" fred_x="" fred_y="" grucha_x="" grucha_y="" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="KOMIKS2" dest="Null" fred_x="-20" fred_y="-20" grucha_x="-20" grucha_y="-20" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="KOMIKS2" dest="PARKING PRZY ROZGLOSNI RADIOWEJ" fred_x="388" fred_y="574" grucha_x="487" grucha_y="573" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="KORYTARZ KLASZTORNY" dest="KAPLICZKA ZA MIASTEM" fred_x="541" fred_y="401" grucha_x="636" grucha_y="322" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="ZAJAZD" dest="PODJAZD POD KLASZTOREM" fred_x="467" fred_y="519" grucha_x="355" grucha_y="524" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="PODJAZD POD KLASZTOREM" dest="AKCJA W KLASZTORZE" fred_x="-20" fred_y="-20" grucha_x="-40" grucha_y="-40" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="AKCJA W KLASZTORZE" dest="KORYTARZ KLASZTORNY" fred_x="326" fred_y="462" grucha_x="395" grucha_y="450" fred_direction="" grucha_direction=""  />
+<Locationpos
+source="TOALETA ZWYKLA" dest="PRZEJSCIE MIEDZY TOALETA A CMENTARZEM" fred_x="40" fred_y="458" grucha_x="0" grucha_y="0" fred_direction="C" grucha_direction="E"  />
+<Locationpos
+source="KAPLICZKA ZA MIASTEM" dest="PLAC PRZED ZAJAZDEM" fred_x="565" fred_y="580" grucha_x="700" grucha_y="570" fred_direction="D" grucha_direction="E"  />
+<Locationpos
+source="KAPLICZKA ZA MIASTEM" dest="KONIEC" fred_x="319" fred_y="330" grucha_x="550" grucha_y="330" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="KORYTARZ KLASZTORNY" dest="PODJAZD POD KLASZTOREM" fred_x="467" fred_y="519" grucha_x="355" grucha_y="524" fred_direction="A" grucha_direction="A"  />
+<Locationpos
+source="ZLOMOWISKO" dest="BLOKADA NA DRODZE" fred_x="1380" fred_y="530" grucha_x="1320" grucha_y="520" fred_direction="C" grucha_direction="C"  />
+</LocationsPositions>
