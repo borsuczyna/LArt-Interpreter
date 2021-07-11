@@ -11,6 +11,26 @@ function findFreeValue(t)
     end
 end
 
+function removenumbers(str)
+    local c = ""
+    for k in str:gmatch(".") do
+        if not tonumber(k) and k ~= "." then
+            c = c .. k
+        end
+    end
+    return c
+end
+
+function removechars(str)
+    local c = ""
+    for k in str:gmatch(".") do
+        if tonumber(k) or k == "." then
+            c = c .. k
+        end
+    end
+    return c
+end
+
 function getTimers()
     return timers
 end

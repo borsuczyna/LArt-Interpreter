@@ -12,7 +12,7 @@ end
 function getAnimationByName(name)
     if cache[name] then return cache[name] end
     for k,v in pairs(animations) do
-        if v.attr.name == name then
+        if v.attr.name:lower() == name:lower() then
             cache[name] = k
             return k
         end
@@ -21,7 +21,7 @@ end
 
 function getIdleAnimationData(name)
     local animation = getAnimationByName(name)
-    assert(animation, "Nie znaleziono animacji.")
+    assert(animation, "Nie znaleziono animacji " .. tostring(name))
     return animations[animation]
 end
 
@@ -60,7 +60,7 @@ function nextCycle(data)
         if data.Cycle[current + 1] and data.Cycle[current + 1].attr.frames:len() > 0 then
             data.Cycle.Current = current + 1
         elseif data.Cycle[2] and data.Cycle[2].attr.frames:len() > 0 then
-            data.Cycle.Current = 2
+            data.Cycle.Current = 3 -- bylo 2
         else
             for i = 3, 15 do
                 if data.Cycle[i] and data.Cycle[i].attr.frames:len() > 0 then
@@ -111,15 +111,29 @@ end
 
 function changeIdleAnimation(name, new)
     local hotpoint = getHotpointByName(name)
-    assert(hotpoint, "Nie znaleziono hotpointa " .. name .. "!")
+    if not hotpoint then return end
 
-    animation = getIdleAnimationData(hotpoint.attr.idle_animation)
-    new_animation = getIdleAnimationData(new)
-    hotpoint.attr.x = hotpoint.attr.x - new_animation.attr.EndOffsetX + animation.attr.StartOffsetX
-    hotpoint.attr.y = hotpoint.attr.y - new_animation.attr.EndOffsetY + animation.attr.StartOffsetY
+    if hotpoint.attr.idle_animation then
+        local animation = getIdleAnimationData(hotpoint.attr.idle_animation)
+        local new_animation = getIdleAnimationData(new)
+        hotpoint.attr.x = hotpoint.attr.x - new_animation.attr.EndOffsetX + animation.attr.StartOffsetX
+        hotpoint.attr.y = hotpoint.attr.y - new_animation.attr.EndOffsetY + animation.attr.StartOffsetY
+    else
+        local new_animation = getIdleAnimationData(new)
+        hotpoint.attr.x = hotpoint.attr.x - new_animation.attr.EndOffsetX
+        hotpoint.attr.y = hotpoint.attr.y - new_animation.attr.EndOffsetY
+    end
     --hotpoint.attr.y = hotpoint.attr.y - new_animation.attr.EndTop + animation.attr.StartTop
 
     hotpoint.attr.idle_animation = new
+end
+
+function setIdleAnimationToEnd(name)
+    local hotpoint = getHotpointByName(name)
+    if not hotpoint then return end
+    
+    local animation = getIdleAnimationData(hotpoint.attr.idle_animation)
+    animation.Cycle.Current = 2
 end
 
 function getIdleAnimationFrame(animation)

@@ -1,4 +1,4 @@
-return { -- precompiled xml2lua
+return {
 	{
 		Miscelaneous = { attr = {
 			MusicVolume = "70",
@@ -16905,7 +16905,7 @@ return { -- precompiled xml2lua
 					attr = {
 						bitmap = "maska_01.png",
 						x = "0",
-						Visible = "0",
+						Visible = "1",
 						id = "Prolog\\Polana z grobem\\maska",
 						y = "0",
 						name = "maska",

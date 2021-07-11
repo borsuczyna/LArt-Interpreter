@@ -1,14 +1,15 @@
 tickCount = 0
 
 xml = require("scripts.lua-xml")
+lbt = require("scripts.lbt")
 serpent = require("scripts.serpent")
 require("scripts.timer")
 require("scripts.cutscenes")
 require("scripts.sounds")
 require("scripts.graphics")
 require("scripts.functions")
-require("scripts.world")
 require("scripts.animations")
+require("scripts.world")
 
 --executeCutscene("Fred rozmawia z FZB po raz drugi")
 

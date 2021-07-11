@@ -43,7 +43,7 @@ function playSoundByName(name)
     end
     local sound = sound:gsub("sounds.pac_", ""):gsub("sounds2.pac_", "")
 
-    local sound = playSound(type .. sound)
+    local sound = playSound("data/sounds/" .. type .. sound:gsub(".ogg", ""):upper() .. ".ogg")
     return sound
 end
 

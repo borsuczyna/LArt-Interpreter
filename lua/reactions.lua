@@ -1,0 +1,18 @@
+return {
+    { type = "Reaction", id1 = "4", id2 = "13", clip_id = "1" },
+    { type = "Reaction", id1 = "10", id2 = "OKO", clip_id = "2" },
+    { type = "Reaction", id1 = "23", id2 = "OKO", clip_id = "3" },
+    { type = "Reaction", id1 = "19", id2 = "32", clip_id = "4" },
+    { type = "Reaction", id1 = "19", id2 = "32", clip_id = "5" },
+    { type = "Reaction", id1 = "19", id2 = "20", clip_id = "6" },
+    { type = "Reaction", id1 = "19", id2 = "21", clip_id = "7" },
+    { type = "Reaction", id1 = "22", id2 = "OKO", clip_id = "8" },
+    { type = "Reaction", id1 = "25", id2 = "17", clip_id = "9" },
+    { type = "Reaction", id1 = "33", id2 = "OKO", clip_id = "10" },
+    { type = "Reaction", id1 = "25", id2 = "30", clip_id = "11" },
+    { type = "Reaction", id1 = "24", id2 = "34", clip_id = "12" },
+    { type = "Reaction", id1 = "73", id2 = "OKO", clip_id = "13" },
+    { type = "Reaction", id1 = "37", id2 = "69", clip_id = "14" },
+    { type = "Reaction", id1 = "46", id2 = "45", clip_id = "15" },
+    { type = "Reaction", id1 = "57", id2 = "OKO", clip_id = "16" },
+}
