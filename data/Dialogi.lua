@@ -1,4 +1,4 @@
---[[ SKRYPT NAPISAŁ BERLINOWSKI BO BORSUK TO LAMUS EZ]]
+--[[ SKRYPT NAPISAŁ LIXXBERTY ]]
 
 return {-- Dialogues --
 ["sounds.pac_05d4c5f6.ogg"] = {"Ja nie mam kumpli... A, Grucha! Co z nim?", "Fred_2695_Akt2_1"},
