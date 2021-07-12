@@ -6,13 +6,26 @@ local characters = {
         x = 0,
         y = 0,
         z = 0,
+        animationOffset = {0, 0},
         visible = true,
-        animation = "Glosnik_nadaje_hejnal",
+        animation = "",
     },
 }
 
 function changeNpcAnimation(name, anim)
     if not characters[name] then return end
+    
+    local animation_old = getIdleAnimationData(characters[name].animation)
+    local animation_new = getIdleAnimationData(anim)
+    --local x, y = animation_new.attr.StartOffsetX, animation_new.attr.StartOffsetY
+    local x, y = characters[name].animationOffset[1], characters[name].animationOffset[2]
+    x, y = x + animation_new.attr.StartOffsetX, y + animation_new.attr.StartOffsetY
+    if animation_old then
+        x = x - animation_old.attr.EndOffsetX
+        y = y - animation_old.attr.EndOffsetY
+    end
+    characters[name].animationOffset = {x, y}
+
     characters[name].animation = anim
 end
 
@@ -143,7 +156,7 @@ function renderCharacters(c)
             end
 
             local scale = v.z/255+0.02
-            local x, y, z = v.x - animation.attr.StartOffsetX*scale, v.y - animation.attr.StartOffsetY*scale, v.z
+            local x, y, z = v.x - v.animationOffset[1]*scale, v.y - v.animationOffset[2]*scale, v.z
             local w, h = getIdleAnimationSize(animation)
             w, h = w*scale, h*scale
             local x, y = getScreenFromWorldPosition(x, y)

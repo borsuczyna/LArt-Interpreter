@@ -155,7 +155,6 @@ function getAnimationByID(id)
 end
 
 function playClipAnimation(v)
-    print(v.animationID .. " anim")
     if v.animationID and v.animationID:len() > 0 then
         local animation = getAnimationByID(v.animationID)
         changeNpcAnimation(v.character, animation)
@@ -268,6 +267,14 @@ function isWaitingTillEndAnimation()
     return (#cutsceneData.animations > 0)
 end
 
+function isWaitingTillEndThisAnimation(name)
+    for k,v in pairs(cutsceneData.animations) do
+        if name:lower() == v:lower() then
+            return true
+        end
+    end
+end
+
 function onAnimationEndCutscene(name)
     if not cutsceneData then return end
 
@@ -280,8 +287,8 @@ function onAnimationEndCutscene(name)
             end
         end
         if found then
-            nextCutscene()
             cutsceneData.animations = {}
+            nextCutscene()
             return
         end
     end

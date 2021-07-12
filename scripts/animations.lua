@@ -21,7 +21,7 @@ end
 
 function getIdleAnimationData(name)
     local animation = getAnimationByName(name)
-    assert(animation, "Nie znaleziono animacji " .. tostring(name))
+    if not animation then return end
     return animations[animation]
 end
 
@@ -47,6 +47,7 @@ end]]
 
 function nextCycle(data)
     local current = (data.Cycle.Current or 1)
+    print(current .. ", " .. data.attr.name)
 
     data.Cycle[current].Current = 1
     
@@ -61,8 +62,7 @@ function nextCycle(data)
             data.Cycle.Current = current + 1
         elseif data.Cycle[2] and data.Cycle[2].attr.frames:len() > 0 then
             data.Cycle.Current = 3 -- bylo 2
-            if isWaitingTillEndAnimation() then
-                onAnimationEnd(data.attr.name)
+            if isWaitingTillEndThisAnimation(data.attr.name) then
                 data.Cycle.Current = 2
             end
         else
