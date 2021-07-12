@@ -4499,7 +4499,7 @@ return {-- Dialogues --
 ["sounds.pac_0005882a.ogg"] = "999BLOKADANADRODZE.OGG",
 ["sounds.pac_01db33a0.ogg"] = "SFX_89.OGG",
 ["sounds.pac_036c4533.ogg"] = "BDJHAJS_1598_AKT3_2.OGG",
-["sounds.pac_0161e050.ogg"] = "_SFX_117.OGG",
+["sounds.pac_0161e050.ogg"] = "SFX_117.OGG",
 ["sounds.pac_0188906f.ogg"] = "SFX_35.OGG",
 ["sounds.pac_01cd3b0c.ogg"] = "SFX_74.OGG",
 ["sounds.pac_01c4cd16.ogg"] = "SFX_67.OGG",

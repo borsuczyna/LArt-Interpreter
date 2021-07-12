@@ -7,7 +7,7 @@ local characters = {
         y = 0,
         z = 0,
         visible = true,
-        animation = "fred_wychodzi_z_grobu",
+        animation = "Glosnik_nadaje_hejnal",
     },
 }
 
@@ -41,7 +41,7 @@ end
 function getHotpointByName(name)
     for _,location in pairs(locations) do
         for _,hotpoint in pairs(location.Hotpoints.Hotpoint) do
-            if hotpoint.attr and hotpoint.attr.name == name then
+            if (hotpoint.attr and hotpoint.attr.name:lower() == name:lower() and hotpoint.attr.id:lower():find(currentLocation.attr.name:lower())) or (hotpoint.attr and hotpoint.attr.id:lower() == name:lower()) then
                 return hotpoint
             end
         end

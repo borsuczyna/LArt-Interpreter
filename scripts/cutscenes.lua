@@ -34,10 +34,6 @@ function setTriggerValue(id, boolean)
     end
 end
 
-setTriggerValue(217, false)
-setTriggerValue(218, true)
-setTriggerValue(42, true)
-
 function isConstraintMet(id)
     local found = false
     for k,v in pairs(cutscenes.constraints) do
@@ -77,6 +73,7 @@ function defaultCutsceneData()
     return {
         groupelem = nil,
         sounds = {},
+        animations = {},
     }
 end
 local currentCutscene
@@ -126,16 +123,22 @@ function exec(data)
             setHotpointVisible(npc, (state:lower() == "true"))
             return true
         elseif data.name == "playsound" then
-            print("Zagrano dzwiek " .. data.sfx)
+            playSoundByName(data.sfx .. ".OGG")
+            return true
+        elseif data.name == "setcurrentidleanimation" then
+            local pos = data.params:find(",")
+            local npc = data.params:sub(1, pos-1)
+            local anim = data.params:sub(pos+1, data.params:len())
+            changeIdleAnimation(npc, anim)
             return true
         end
     elseif data.type == "ClipAnimation" then
         playClipAnimation(data)
         if data.groupelem and data.groupelem:len() > 0 then
             cutsceneData.groupelem = removenumbers(data.groupelem)
-            print("Groupelem set to " .. removenumbers(data.groupelem))
             return true
         else
+            currentCutscene = deleteFirstIndex(currentCutscene)
             return false
         end
     end
@@ -152,10 +155,15 @@ function getAnimationByID(id)
 end
 
 function playClipAnimation(v)
+    print(v.animationID .. " anim")
     if v.animationID and v.animationID:len() > 0 then
         local animation = getAnimationByID(v.animationID)
         changeNpcAnimation(v.character, animation)
         changeIdleAnimation(v.character, animation)
+
+        if not v.wavename or v.wavename:len() == 0 then
+            table.insert(cutsceneData.animations, animation)
+        end
     end
     if v.wavename and v.wavename:len() > 0 then
         local sound = playSoundByName(v.wavename)
@@ -236,29 +244,55 @@ end
 function nextCutscene()
     if not currentCutscene[1] then cutsceneData = defaultCutsceneData(); return end
     local next = exec(currentCutscene[1])
-    currentCutscene = deleteFirstIndex(currentCutscene)
     if next then
+        currentCutscene = deleteFirstIndex(currentCutscene)
         nextCutscene()
     end
 end
 
 function updateCutscenes()
     if #cutsceneData.sounds > 0 and currentCutscene then
-        local playing = true
         for k,v in pairs(cutsceneData.sounds) do
-            if not v.sound:isPlaying() then
-                playing = false
-                
+            if v.sound and not v.sound:isPlaying() then
                 setIdleAnimationToEnd(v.character)
                 changeNpcAnimationToEnd(v.character)
 
                 v.sound:release()
-                v = nil
-                table.remove(cutsceneData.sounds, k)
+                v.sound = nil
             end
         end
-        if not playing then
-            nextCutscene()
+    end
+end
+
+function isWaitingTillEndAnimation()
+    return (#cutsceneData.animations > 0)
+end
+
+function onAnimationEndCutscene(name)
+    if not cutsceneData then return end
+
+    if isWaitingTillEndAnimation() then
+        local found = false
+        for k,v in pairs(cutsceneData.animations) do
+            if name:lower() == v:lower() then
+                found = true
+                break
+            end
         end
+        if found then
+            nextCutscene()
+            cutsceneData.animations = {}
+            return
+        end
+    end
+
+    local playing = false
+    for k,v in pairs(cutsceneData.sounds) do
+        if v.sound then
+            playing = true
+        end
+    end
+    if not playing then
+        nextCutscene()
     end
 end

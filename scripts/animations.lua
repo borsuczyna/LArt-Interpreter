@@ -61,6 +61,10 @@ function nextCycle(data)
             data.Cycle.Current = current + 1
         elseif data.Cycle[2] and data.Cycle[2].attr.frames:len() > 0 then
             data.Cycle.Current = 3 -- bylo 2
+            if isWaitingTillEndAnimation() then
+                onAnimationEnd(data.attr.name)
+                data.Cycle.Current = 2
+            end
         else
             for i = 3, 15 do
                 if data.Cycle[i] and data.Cycle[i].attr.frames:len() > 0 then
@@ -80,7 +84,7 @@ function nextCycle(data)
 end
 
 function onAnimationEnd(name)
-
+    onAnimationEndCutscene(name)
 end
 
 function updateIdleAnimation(data)
@@ -131,12 +135,14 @@ end
 function setIdleAnimationToEnd(name)
     local hotpoint = getHotpointByName(name)
     if not hotpoint then return end
-    
-    local animation = getIdleAnimationData(hotpoint.attr.idle_animation)
-    animation.Cycle.Current = 2
+
+    local data = getIdleAnimationData(hotpoint.attr.idle_animation)
+    local current = (data.Cycle.Current or 1)
+    data.Cycle.Current = 2
 end
 
 function getIdleAnimationFrame(animation)
+    local prev = tostring(animation)
     if type(animation) == "string" then
         animation = getIdleAnimationData(animation)
     end
