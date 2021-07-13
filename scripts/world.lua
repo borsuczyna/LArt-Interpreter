@@ -9,14 +9,36 @@ local characters = {
         animationOffset = {0, 0},
         visible = true,
         animation = "",
+        rotation = "A",
+    },
+    ["Grucha"] = {
+        x = 0,
+        y = 0,
+        z = 0,
+        animationOffset = {0, 0},
+        visible = false,
+        animation = "",
+        rotation = "A",
     },
 }
 
+function getCharacterDirection(name)
+    return characters[name].rotation
+end
+
+function restoreNpcPrevAnimation(anim)
+    for k,v in pairs(characters) do
+        if v.animation:lower() == anim:lower() then
+            changeNpcAnimation(k, k .. "_stoi_" .. v.rotation)
+        end
+    end
+end
+
 function changeNpcAnimation(name, anim)
     if not characters[name] then return end
-    
-    local animation_old = getIdleAnimationData(characters[name].animation)
-    local animation_new = getIdleAnimationData(anim)
+
+    local animation_old = getIdleAnimationData(characters[name].animation, name)
+    local animation_new = getIdleAnimationData(anim, name)
     --local x, y = animation_new.attr.StartOffsetX, animation_new.attr.StartOffsetY
     local x, y = characters[name].animationOffset[1], characters[name].animationOffset[2]
     x, y = x + animation_new.attr.StartOffsetX, y + animation_new.attr.StartOffsetY
@@ -31,7 +53,7 @@ end
 
 function changeNpcAnimationToEnd(name)
     if not characters[name] then return end
-    local animation = getIdleAnimationData(characters[name].animation)
+    local animation = getIdleAnimationData(characters[name].animation, name)
     animation.Cycle.Current = 2
 end
 
@@ -123,6 +145,45 @@ function findLocationChange(source, dest)
     end
 end
 
+function isInvertCloser(source, dest)
+    if source == "A" and (dest == "H" or dest == "G" or dest == "F") then
+        return true
+    elseif source == "B" and (dest == "A" or dest == "H" or dest == "G") then
+        return true
+    elseif source == "C" and (dest == "B" or dest == "A" or dest == "H") then
+        return true
+    elseif source == "D" and (dest == "C" or dest == "B" or dest == "A") then
+        return true
+    elseif source == "E" and (dest == "D" or dest == "C" or dest == "B") then
+        return true
+    elseif source == "F" and (dest == "E" or dest == "D" or dest == "C") then
+        return true
+    elseif source == "G" and (dest == "F" or dest == "E" or dest == "D") then
+        return true
+    elseif source == "H" and (dest == "G" or dest == "F" or dest == "E") then
+        return true
+    end
+    return false
+end
+
+function rotateNpc(name, dest)
+    if characters[name].rotation == dest then
+        return true
+    end
+    characters[name].rotateDest = dest
+    local frame = getFrameByRotation(characters[name].rotation)
+    assert(frame, "Zbugowałeś gre! (brak rotacji dla " .. name .. ")")
+    local invert = isInvertCloser(characters[name].rotation, dest)
+    if invert then
+        frame = 23 - frame
+    end
+    if frame then
+        setIdleAnimationFrame(name .. "_obrot" .. (invert and "_invert" or ""), frame)
+    end
+    characters[name].animation = name .. "_obrot" .. (invert and "_invert" or "")
+    return false
+end
+
 function getZFromWisMap(x, y)
     local image = getImageByName(currentLocation.attr.GameLogicMap)
     image = ('data/graphics/%08d.png'):format(image)
@@ -142,9 +203,35 @@ function setWorld(name)
         characters.Fred.y = tonumber(change.fred_y)
         local z, walkAble = getZFromWisMap(characters.Fred.x, characters.Fred.y)
         characters.Fred.z = z
+        characters.Fred.rotation = change.fred_direction
     end
 
     onWorldChangeCutscene(name, prev)
+end
+
+local rotations = {
+    [0] = "A",
+    [3] = "B",
+    [6] = "C",
+    [9] = "D",
+    [12] = "E",
+    [15] = "F",
+    [18] = "G",
+    [21] = "H"
+}
+
+function getRotationByFrame(id)
+    local id = tonumber(id)
+    return rotations[id]
+end
+
+function getFrameByRotation(rot)
+    for k,v in pairs(rotations) do
+        if v == rot then
+            return k
+        end
+    end
+    return false
 end
 
 function renderCharacters(c)
@@ -152,12 +239,24 @@ function renderCharacters(c)
         if v.visible then
             local animation = v.animation
             if type(animation) == "string" then
-                animation = getIdleAnimationData(animation)
+                animation = getIdleAnimationData(animation, k)
+            end
+
+            if v.animation:lower():find("_obrot") and v.rotateDest then
+                local current = (animation.Cycle.Current or 1)
+                local Cycle = stringToTable(animation.Cycle[current].attr.frames)
+                local rotation = getRotationByFrame(Cycle[animation.Cycle[current].Current])
+                if rotation then
+                    v.rotation = rotation
+                end
+                if rotation == v.rotateDest then
+                    v.animation = k .. "_stoi_" .. rotation
+                end
             end
 
             local scale = v.z/255+0.02
             local x, y, z = v.x - v.animationOffset[1]*scale, v.y - v.animationOffset[2]*scale, v.z
-            local w, h = getIdleAnimationSize(animation)
+            local w, h = getIdleAnimationSize(animation, k)
             w, h = w*scale, h*scale
             local x, y = getScreenFromWorldPosition(x, y)
             renderIdleAnimation(x, y, z, animation, w, h)

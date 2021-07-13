@@ -18342,5 +18342,13 @@ return {
     "PIEKLO_00",
     "GOBEM_00",
     "SAMOCHODU_00",
-    "KAFEI_0"
+    "KAFEI_0",
+    "FRED_STOI_A_01",
+    "FRED_STOI_B_01",
+    "FRED_STOI_C_01",
+    "FRED_STOI_D_01",
+    "FRED_STOI_E_01",
+    "FRED_STOI_F_01",
+    "FRED_STOI_G_01",
+    "FRED_STOI_H_01",
 }

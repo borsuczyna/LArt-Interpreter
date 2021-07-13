@@ -9,7 +9,11 @@ function stringToTable(str)
     return t
 end
 
-function getAnimationByName(name)
+function getAnimationByName(name, npc)
+    local anim = getCharacterAnimationByName(name, npc)
+    if anim then
+        name = anim
+    end
     if cache[name] then return cache[name] end
     for k,v in pairs(animations) do
         if v.attr.name:lower() == name:lower() then
@@ -19,8 +23,8 @@ function getAnimationByName(name)
     end
 end
 
-function getIdleAnimationData(name)
-    local animation = getAnimationByName(name)
+function getIdleAnimationData(name, npc)
+    local animation = getAnimationByName(name, npc)
     if not animation then return end
     return animations[animation]
 end
@@ -47,7 +51,6 @@ end]]
 
 function nextCycle(data)
     local current = (data.Cycle.Current or 1)
-    print(current .. ", " .. data.attr.name)
 
     data.Cycle[current].Current = 1
     
@@ -77,6 +80,7 @@ function nextCycle(data)
         if data.Cycle[1].attr.frames:len() > 0 then
             data.Cycle.Current = 1
         end
+        restoreNpcPrevAnimation(data.attr.name)
         onAnimationEnd(data.attr.name)
     end
 
@@ -113,6 +117,15 @@ function updateIdleAnimation(data)
     return frame or 0
 end
 
+function setIdleAnimationFrame(name, frame)
+    local data = getIdleAnimationData(name)
+    if not data then return end
+
+    local Cycle = stringToTable(data.Cycle[3].attr.frames)
+    data.Cycle[3].Current = frame
+    data.Cycle.Current = 3
+end
+
 function changeIdleAnimation(name, new)
     local hotpoint = getHotpointByName(name)
     if not hotpoint then return end
@@ -141,29 +154,29 @@ function setIdleAnimationToEnd(name)
     data.Cycle.Current = 2
 end
 
-function getIdleAnimationFrame(animation)
+function getIdleAnimationFrame(animation, npc)
     local prev = tostring(animation)
     if type(animation) == "string" then
-        animation = getIdleAnimationData(animation)
+        animation = getIdleAnimationData(animation, npc)
     end
     assert(type(animation) == "table", "Nie znaleziono animacji.")
 
     local frame = updateIdleAnimation(animation)
     if frame then
-        local name = ('%s_%02d'):format(animation.attr.name:upper(), frame+1)
+        local name = ('%s_%02d'):format(animation.attr.name:gsub("_invert", ""):upper(), frame+1)
         local image = getImageByName(name)
         assert(image, "Nie znaleziono klatki animacji.")
         return ('data/graphics/%08d.png'):format(image)
     end
 end
 
-function getIdleAnimationSize(animation)
-    local image = getIdleAnimationFrame(animation)
+function getIdleAnimationSize(animation, npc)
+    local image = getIdleAnimationFrame(animation, npc)
     return getImageSize(image)
 end
 
 function renderIdleAnimation(x, y, z, animation, w, h)
-    local image = getIdleAnimationFrame(animation)
+    local image = getIdleAnimationFrame(animation, npc)
 
     if not w then
         dxDrawAbsoluteImage3D(x, y, 1, z, image)

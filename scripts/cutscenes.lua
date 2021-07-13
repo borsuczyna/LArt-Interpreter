@@ -13,6 +13,16 @@ local cutscenes = {
     akt = "prolog",
 }
 
+function getCharacterAnimationByName(name, npc)
+    for k,v in pairs(cutscenes.animationsid) do
+        if v.group == name and v.character == npc then
+            if v.name:sub(v.name:len()-1, v.name:len()) == "_" .. getCharacterDirection(npc) then
+                return v.name
+            end
+        end
+    end
+end
+
 function getCurrentAct()
     return cutscenes[cutscenes.akt]
 end
@@ -115,12 +125,15 @@ function exec(data)
             local x, y = loadstring("return " .. data.name:gsub("podejsc do ", ""))()
             print("Pominieto podejsc do bo nie wykonane")
             return true
+        elseif data.name:find("obrot do") then
+            local rotate_to = data.name:gsub("obrot do ", "")
+            return rotateNpc(data.character, rotate_to:upper())
         elseif data.name == "set visible" then
             local pos = data.params:find(",")
             local npc = data.params:sub(1, pos-1)
             local state = data.params:sub(pos+1, data.params:len())
-            setCharacterVisible(npc, (state:lower() == "true"))
-            setHotpointVisible(npc, (state:lower() == "true"))
+            setCharacterVisible(npc, (state:lower():gsub(" ", "") == "true"))
+            setHotpointVisible(npc, (state:lower():gsub(" ", "") == "true"))
             return true
         elseif data.name == "playsound" then
             playSoundByName(data.sfx .. ".OGG")
@@ -165,6 +178,7 @@ function playClipAnimation(v)
         end
     end
     if v.wavename and v.wavename:len() > 0 then
+        print(v.wavename)
         local sound = playSoundByName(v.wavename)
         table.insert(cutsceneData.sounds, {sound=sound, character=v.character})
     end
@@ -255,6 +269,7 @@ function updateCutscenes()
             if v.sound and not v.sound:isPlaying() then
                 setIdleAnimationToEnd(v.character)
                 changeNpcAnimationToEnd(v.character)
+                print("s")
 
                 v.sound:release()
                 v.sound = nil
