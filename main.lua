@@ -11,8 +11,6 @@ require("scripts.functions")
 require("scripts.animations")
 require("scripts.world")
 
---executeCutscene("Fred rozmawia z FZB po raz drugi")
-
 love.window.setMode(800, 600)
 
 function love.draw()

@@ -90,33 +90,50 @@ local currentCutscene
 local cutsceneData = defaultCutsceneData()
 
 function deleteFirstIndex(t)
-    local c = {}
-    local i, id = 1, 1
-    for k,v in ipairs(t) do
-        if i > 1 then
-            c[id] = v
-            id = id + 1
-        end
-        i = i + 1
+    table.remove(t, 1)
+    return t
+end
+
+function string:wlen()
+    return self:gsub(" ",""):len()
+end
+
+function transformGroupelem(gl)
+    if not gl or gl:len() == 0 then
+        return false
+    end
+
+    local c = removenumbers(tostring(gl))
+    if c:len() == 0 then
+        c = "n"
     end
     return c
 end
 
-function exec(data)
-    if not data then return end
-    if cutsceneData.groupelem then
-        if (cutsceneData.groupelem ~= removenumbers(tostring(data.groupelem))) or (tonumber(cutsceneData.groupelem) and tostring(data.groupelem) ~= "0") then
-            cutsceneData.groupelem = nil
-            return false
-        end
+function getGroupelemTime(gl)
+    if gl:len() < 2 then
+        return false
     end
-    
-    if data.groupelem and data.groupelem:len() > 0 then
-        local time = removechars(data.groupelem)
-        if time and time:len() > 0 then
-            data.groupelem = false
-            setTimer(exec, tonumber(time)*1000, data)
-            return true
+    local time = removechars(tostring(gl))
+    return tonumber(time)
+end
+
+function exec(data, force)
+    if not data then return end
+    if not force then
+        if cutsceneData.groupelem then
+            if cutsceneData.groupelem ~= transformGroupelem(data.groupelem) then
+                cutsceneData.groupelem = nil
+                return false
+            end
+        end
+
+        if data.groupelem and data.groupelem:len() > 0 then
+            local time = getGroupelemTime(data.groupelem)
+            if time and time > 0 then
+                setTimer(exec, tonumber(time)*1000, data, true)
+                return true
+            end
         end
     end
 
@@ -127,7 +144,11 @@ function exec(data)
             return true
         elseif data.name:find("obrot do") then
             local rotate_to = data.name:gsub("obrot do ", "")
-            return rotateNpc(data.character, rotate_to:upper())
+            local rotated = rotateNpc(data.character, rotate_to:upper())
+            if not rotated then
+                cutsceneData.waitingForRotation = true
+            end
+            return rotated
         elseif data.name == "set visible" then
             local pos = data.params:find(",")
             local npc = data.params:sub(1, pos-1)
@@ -148,15 +169,97 @@ function exec(data)
     elseif data.type == "ClipAnimation" then
         playClipAnimation(data)
         if data.groupelem and data.groupelem:len() > 0 then
-            cutsceneData.groupelem = removenumbers(data.groupelem)
+            cutsceneData.groupelem = transformGroupelem(data.groupelem)
             return true
         else
-            currentCutscene = deleteFirstIndex(currentCutscene)
-            return false
+            return 2
         end
     end
     print(data.type)
     return false
+end
+
+--[[function exec(data)
+    if not data then return end
+    if cutsceneData.groupelem then
+        print("cutsceneData.groupelem ", tostring(cutsceneData.groupelem) .. " len: " .. cutsceneData.groupelem:len(), data.groupelem .. "len: ".. data.groupelem:len(), data.text)
+        if data.groupelem:len() == 0 then
+            print("-------- usunelo groupelema " .. cutsceneData.groupelem)
+            cutsceneData.groupelem = nil
+        end
+        if (cutsceneData.groupelem ~= removenumbers(tostring(data.groupelem))) then
+            if cutsceneData.groupelem ~= "0" or data.groupelem ~= "0" then
+                cutsceneData.groupelem = nil
+                return false
+            end
+        end
+    end
+    
+    if data.groupelem and data.groupelem:len() > 0 then
+        local time = removechars(data.groupelem)
+        if time and time:len() > 0 then
+            local _type = removenumbers(tostring(data.groupelem))
+            data.groupelemprev = data.groupelem
+            data.groupelem = false
+            if _type:len() > 0 or tonumber(time) == 0 then
+                setTimer(exec, tonumber(time)*1000, data)
+                return true
+            end
+        end
+    end
+
+    if data.type == "ClipAction" then
+        if data.name:find("podejsc do") then
+            local x, y = loadstring("return " .. data.name:gsub("podejsc do ", ""))()
+            print("Pominieto podejsc do bo nie wykonane")
+            return true
+        elseif data.name:find("obrot do") then
+            local rotate_to = data.name:gsub("obrot do ", "")
+            local rotated = rotateNpc(data.character, rotate_to:upper())
+            if not rotated then
+                cutsceneData.waitingForRotation = true
+            end
+            return rotated
+        elseif data.name == "set visible" then
+            local pos = data.params:find(",")
+            local npc = data.params:sub(1, pos-1)
+            local state = data.params:sub(pos+1, data.params:len())
+            setCharacterVisible(npc, (state:lower():gsub(" ", "") == "true"))
+            setHotpointVisible(npc, (state:lower():gsub(" ", "") == "true"))
+            return true
+        elseif data.name == "playsound" then
+            playSoundByName(data.sfx .. ".OGG")
+            return true
+        elseif data.name == "setcurrentidleanimation" then
+            local pos = data.params:find(",")
+            local npc = data.params:sub(1, pos-1)
+            local anim = data.params:sub(pos+1, data.params:len())
+            changeIdleAnimation(npc, anim)
+            return true
+        end
+    elseif data.type == "ClipAnimation" then
+        playClipAnimation(data)
+        if (data.groupelem or data.groupelemprev) and (data.groupelem or data.groupelemprev):len() > 0 then
+            cutsceneData.groupelem = removenumbers((data.groupelem or data.groupelemprev))
+            if cutsceneData.groupelem:len() == 0 and data.groupelem and removenumbers(tostring(data.groupelem)):len() > 0 then
+                cutsceneData.groupelem = "0"
+            elseif cutsceneData.groupelem:len() == 0 then
+                cutsceneData.groupelem = "0"
+                print("usunelo bo bylo " .. data.groupelemprev)
+            end
+            return true
+        else
+            return 2
+        end
+    end
+    print(data.type)
+    return false
+end]]
+
+function onEndRotating()
+    if not cutsceneData or not cutsceneData.waitingForRotation then return end
+    nextCutscene()
+    cutsceneData.waitingForRotation = false
 end
 
 function getAnimationByID(id)
@@ -173,14 +276,18 @@ function playClipAnimation(v)
         changeNpcAnimation(v.character, animation)
         changeIdleAnimation(v.character, animation)
 
-        if not v.wavename or v.wavename:len() == 0 then
+        if not v.wavename or v.wavename:len() == 0 and (not v.groupelem or v.groupelem:len() < 2 and v.groupelem ~= "0") then
             table.insert(cutsceneData.animations, animation)
+            print(v.groupelem)
+        else
+            print(v.groupelem,"dsa")
         end
     end
     if v.wavename and v.wavename:len() > 0 then
-        print(v.wavename)
         local sound = playSoundByName(v.wavename)
-        table.insert(cutsceneData.sounds, {sound=sound, character=v.character})
+        if (not v.groupelem or v.groupelem:len() < 2 or v.groupelem ~= "0") then
+            table.insert(cutsceneData.sounds, {sound=sound, character=v.character})
+        end
     end
 end
 
@@ -259,7 +366,7 @@ function nextCutscene()
     local next = exec(currentCutscene[1])
     if next then
         currentCutscene = deleteFirstIndex(currentCutscene)
-        nextCutscene()
+        if next ~= 2 then nextCutscene() end
     end
 end
 
@@ -269,7 +376,6 @@ function updateCutscenes()
             if v.sound and not v.sound:isPlaying() then
                 setIdleAnimationToEnd(v.character)
                 changeNpcAnimationToEnd(v.character)
-                print("s")
 
                 v.sound:release()
                 v.sound = nil

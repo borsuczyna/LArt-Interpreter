@@ -6324,7 +6324,7 @@ return {
 						wave = "",
 						text = "",
 					},
-					{
+					--[[{
 						type = "ClipAnimation",
 						animationID = "504",
 						wavename = "Grucha_115standard",
@@ -6334,7 +6334,7 @@ return {
 						popup = "",
 						groupelem = "",
 						params = "",
-					},
+					},]]
 					{
 						type = "ClipAction",
 						actionID = "",
@@ -6394,7 +6394,7 @@ return {
 						wave = "",
 						text = "",
 					},
-					{
+					--[[{
 						type = "ClipAnimation",
 						animationID = "552",
 						wavename = "",
@@ -6438,7 +6438,7 @@ return {
 						popup = "",
 						groupelem = "",
 						params = "",
-					},
+					},]]
 					{
 						type = "ClipAnimation",
 						animationID = "552",
@@ -6450,7 +6450,7 @@ return {
 						groupelem = "",
 						params = "",
 					},
-					{
+					--[[{
 						type = "ClipAnimation",
 						animationID = "55",
 						wavename = "Fred_2212_prolog",
@@ -6460,7 +6460,7 @@ return {
 						popup = "",
 						groupelem = "",
 						params = "",
-					},
+					},]]
 					{
 						type = "ClipAction",
 						actionID = "",
@@ -6508,7 +6508,7 @@ return {
 						wave = "",
 						text = "",
 					},
-					{
+					--[[{
 						type = "ClipAnimation",
 						animationID = "8",
 						wavename = "FZB_2216_prolog",
@@ -6597,7 +6597,7 @@ return {
 						popup = "",
 						groupelem = "",
 						params = "",
-					},
+					},]]
 					{
 						type = "ClipAction",
 						actionID = "14",

@@ -168,6 +168,7 @@ end
 
 function rotateNpc(name, dest)
     if characters[name].rotation == dest then
+        print(characters[name].rotation .. " , " .. dest)
         return true
     end
     characters[name].rotateDest = dest
@@ -180,7 +181,7 @@ function rotateNpc(name, dest)
     if frame then
         setIdleAnimationFrame(name .. "_obrot" .. (invert and "_invert" or ""), frame)
     end
-    characters[name].animation = name .. "_obrot" .. (invert and "_invert" or "")
+    changeNpcAnimation(name, name .. "_obrot" .. (invert and "_invert" or ""))
     return false
 end
 
@@ -250,7 +251,9 @@ function renderCharacters(c)
                     v.rotation = rotation
                 end
                 if rotation == v.rotateDest then
-                    v.animation = k .. "_stoi_" .. rotation
+                    changeNpcAnimation(k, k .. "_stoi_" .. rotation)
+                    v.rotateDest = false
+                    onEndRotating()
                 end
             end
 
@@ -267,7 +270,7 @@ end
 function setHotpointVisible(name, state)
     if not currentLocation then return end
     for k,v in pairs(currentLocation.Hotpoints.Hotpoint) do
-        if v.attr.id == name then
+        if v.attr.id:lower() == name:lower() then
             local actdata = getHotpointFromAct(v.attr.id)
             v.attr.Visible = (state and "1" or "0")
             actdata.display = (state and "" or "invisible")
