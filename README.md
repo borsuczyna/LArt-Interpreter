@@ -1,7 +1,7 @@
 # LArt-Interpreter
 L-Art Boyz Don't Cry (Chłopaki Nie Płaczą) Interpreter for LÖVE.
 
-MIT License.
+Beerware License.
 
 Installation:
 1. Install LÖVE (https://love2d.org)
